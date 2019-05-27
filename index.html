@@ -7,25 +7,43 @@
   <link rel="stylesheet" href="app.css"/>
   
 </head>
-<body>
-  <div class="app-wrapper">
-  <header class="header">
-    <h1 class="logo">Gruppe 29 <!--Logo øverst på siden -->
-    </h1>
-  </header>
-  <form id="addCard" class="fromCard"> <!--Legger til cards i "to do" list-->
-    Add Task: 
-    <input type="text" autocomplete="off" name="todoText" id="" value="" placeholder="Submit title..." />
-  </form>
-  <div class="board" id="board"></div> <!--Tar denne senere-->
-  <form id="newList" class="cnewList"> <!--Opprettelse av ny liste-->
-    Add List: 
-    <input type="text" autocomplete="off" name="list_name" id="" value="" placeholder="List name" />
-    <!--Regulerer verdier om lister og lagring av disse-->
-  </form>
-  </div>
+  <body>
 
-<script src="https://cdn.jsdelivr.net/lodash/4/lodash.min.js"></script>
-<script src="app.js"></script>
-</body>
+    <div class="app-wrapper">
+
+      <header class="header">
+
+        <h1 class="logo">Gruppe 29 <!--Logo øverst på siden -->
+        </h1>
+
+      </header>
+
+      <div class="progress-bar blue stripes">
+          <span style="width: 40%"></span>
+      </div>
+
+      <form id="addCard" class="fromCard"> <!--Legger til cards i "to do" list-->
+
+        Add Task: 
+        <input type="text" autocomplete="off" name="todoText" id="" value="" placeholder="Submit title..." />
+
+      </form>
+
+
+    <div class="board" id="board"></div><!--Tar denne senere-->
+
+      <form id="newList" class="cnewList"> <!--Opprettelse av ny liste-->
+
+        Add List: 
+        <input type="text" autocomplete="off" name="list_name" id="" value="" placeholder="List name" />
+        <!--Regulerer verdier om lister og lagring av disse-->
+
+      </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/lodash/4/lodash.min.js"></script>
+      <script src="app.js"></script>
+
+  </body>
 </html>

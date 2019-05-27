@@ -1,3 +1,19 @@
+
+
+/*function moveBar() {
+  var elem = document.getElementById("barProgress");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}*/
+
 (function() {
 
   var UI = {
@@ -85,7 +101,7 @@
     return card;
   }
   
-  
+
   function addCard(text, listID, index, updateCounters) {
     listID = listID || 1;
     if(!text) return false;
