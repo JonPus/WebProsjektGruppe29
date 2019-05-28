@@ -1,8 +1,10 @@
 
+/*Progress Bar funksjonen */
 
-/*function moveBar() {
-  var elem = document.getElementById("barProgress");   
-  var width = 1;
+
+function moveFinished() {
+  var elem = document.getElementById("spanBar"); 
+  var width = 10;
   var id = setInterval(frame, 10);
   function frame() {
     if (width >= 100) {
@@ -10,9 +12,28 @@
     } else {
       width++; 
       elem.style.width = width + '%'; 
+      
     }
   }
-}*/
+}
+
+function moveBar() {
+  var elem = document.getElementById("spanBar"); 
+  var width = 0;
+  var id = setInterval(frame, 25);
+
+  function frame() {
+    if (width >= 10) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      
+    }
+  }
+
+}
+
 
 (function() {
 
@@ -25,8 +46,7 @@
     todos = [],
     isDragging = false,
     _listCounter = 0, 
-    _cardCounter = 0; 
-
+    _cardCounter = 0;
 
   function live(eventType, selector, callback) {
     document.addEventListener(eventType, function (e) {
@@ -100,7 +120,6 @@
     
     return card;
   }
-  
 
   function addCard(text, listID, index, updateCounters) {
     listID = listID || 1;
@@ -114,6 +133,7 @@
     }
 
     if(updateCounters !== false) updateCardCounts();
+
   }
   
   function newList(name) {
@@ -168,6 +188,7 @@
         card.listID = newListId;
         ++getList({_id: newListId}).cards;
         updateCardCounts();
+        moveBar();
       }
     
       if(index){
