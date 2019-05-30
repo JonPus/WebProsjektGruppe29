@@ -34,7 +34,6 @@ function moveBar() {
 
 }
 
-
 (function() {
 
   var UI = {
@@ -115,13 +114,15 @@ function moveBar() {
     };
     todos.push(todo);
     
-   
     ++list.cards;
     
     return card;
   }
 
   function addCard(text, listID, index, updateCounters) {
+
+    var text = prompt("textInput");
+
     listID = listID || 1;
     if(!text) return false;
     var list = document.getElementById('list_'+listID);
@@ -135,7 +136,7 @@ function moveBar() {
     if(updateCounters !== false) updateCardCounts();
 
   }
-  
+
   function newList(name) {
     name = name.trim();
     if(!name || name === '') return false;
@@ -143,6 +144,12 @@ function moveBar() {
     var list = document.createElement("div");
     var heading = document.createElement("h3");
     var listCounter = document.createElement("span");
+
+    var button = document.createElement("BUTTON");  
+    button.innerHTML = "+";
+    document.body.appendChild(button);
+    button.className = "listButton";
+    button.appendChild(list);
     
     list.dataset.id = newListID;
     list.id = 'list_'+newListID;
@@ -152,17 +159,18 @@ function moveBar() {
     heading.className = "listname";
     heading.innerHTML = name;
     heading.appendChild(listCounter)
-    
+
     listCounter.innerHTML = 0;
     
     lists.push({
       _id: newListID,
       name: name,
       cards: 0,
-      elCounter: listCounter
+      elCounter: listCounter,
     });
     
     UI.elBoard.append(list);
+
   }
   
   function getList (obj) {
@@ -226,9 +234,6 @@ function moveBar() {
     newList('To do');
     newList('In Progress');
     newList('Done');
-    addCard('Oppgave 1', 1, null, false);
-    addCard('Oppgave 2', 1, null, false);
-    addCard('Oppgave 3', 1, null, false);
 
     updateCardCounts();
     

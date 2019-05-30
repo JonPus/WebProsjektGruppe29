@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>--</title>
+  <title>SpaceIT</title>
   <link rel="stylesheet" href="app.css"/>
   
 </head>
@@ -13,7 +13,7 @@
 
       <header class="header">
 
-        <h1 class="logo">Gruppe 29 <!--Logo øverst på siden -->
+        <h1 class="logo">SpaceIT <!--Logo øverst på siden -->
         </h1>
 
       </header>
@@ -24,14 +24,15 @@
       <button class="gradient-button gradient-button-3" onclick="moveFinished()">FINISH</button>
 
       <form id="addCard" class="fromCard"> <!--Legger til cards i "to do" list-->
-
-        Add Task: 
-        <input type="text" autocomplete="off" name="todoText" id="" value="" placeholder="Submit title..." />
-
+        
+        <button id="addCard" onClick="addCard()" name="todoText" id="" value="">+</button>
+        
       </form>
 
 
-    <div class="board" id="board"></div><!--Tar denne senere-->
+    <div class="board" id="board">
+
+    </div><!--Tar denne senere-->
 
       <form id="newList" class="cnewList"> <!--Opprettelse av ny liste-->
 
