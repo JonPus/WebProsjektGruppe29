@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SpaceIT</title>
+  <link rel="stylesheet" href="app.css"/>
+  
+</head>
+  <body>
+
+    <div class="app-wrapper">
+
+      <header class="header">
+
+        <h1 class="logo">SpaceIT <!--Logo øverst på siden -->
+        </h1>
+
+      </header>
+
+      <div class="progress-bar blue stripes">
+          <span id="spanBar"></span>
+      </div>
+      <button class="gradient-button gradient-button-3" onclick="moveFinished()">FINISH</button>
+
+      <form id="addCard" class="fromCard"> <!--Legger til cards i "to do" list-->
+        
+        <button id="addCard" onClick="addCard()" name="todoText" id="" value="">+</button>
+        
+      </form>
+
+
+    <div class="board" id="board">
+
+    </div><!--Tar denne senere-->
+
+      <form id="newList" class="cnewList"> <!--Opprettelse av ny liste-->
+
+        Add List: 
+        <input type="text" autocomplete="off" name="list_name" id="" value="" placeholder="List name" />
+        <!--Regulerer verdier om lister og lagring av disse-->
+
+      </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/lodash/4/lodash.min.js"></script>
+      <script src="app.js"></script>
+
+  </body>
+</html>
