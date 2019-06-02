@@ -34,6 +34,7 @@ function moveBar() {
 
 }
 
+
 (function() {
 
   var UI = {
@@ -121,7 +122,7 @@ function moveBar() {
 
   function addCard(text, listID, index, updateCounters) {
 
-    var text = prompt("textInput");
+    var text = prompt("Task");
 
     listID = listID || 1;
     if(!text) return false;
@@ -138,18 +139,15 @@ function moveBar() {
   }
 
   function newList(name) {
+
+    var name = prompt("New List");
+
     name = name.trim();
     if(!name || name === '') return false;
     var newListID = ++_listCounter;
     var list = document.createElement("div");
     var heading = document.createElement("h3");
     var listCounter = document.createElement("span");
-    var button = document.createElement("BUTTON");
-
-    button.innerHTML = "+";
-    document.body.appendChild(button);
-    button.className = "listButton";
-    button.appendChild(list);
     
     list.dataset.id = newListID;
     list.id = 'list_'+newListID;
@@ -172,6 +170,7 @@ function moveBar() {
     UI.elBoard.append(list);
 
   }
+
   
   function getList (obj) {
     return _.find(lists, obj);
@@ -229,11 +228,7 @@ function moveBar() {
     return UI.elCardPlaceholder;
   }
   
-  function init () {
-
-    newList('To do');
-    newList('In Progress');
-    newList('Done');
+  function init() {
 
     updateCardCounts();
     

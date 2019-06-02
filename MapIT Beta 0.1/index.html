@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>SpaceIT</title>
+  <title>MapIT</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="app.css"/>
   
 </head>
@@ -13,7 +14,7 @@
 
       <header class="header">
 
-        <h1 class="logo">SpaceIT <!--Logo øverst på siden -->
+        <h1 class="logo">MapIT <!--Logo øverst på siden -->
         </h1>
 
       </header>
@@ -25,7 +26,7 @@
 
       <form id="addCard" class="fromCard"> <!--Legger til cards i "to do" list-->
         
-        <button id="addCard" onClick="addCard()" name="todoText" id="" value="">+</button>
+        <button id="addCard" class="addCard shadow animate blue" onClick="addCard()" name="todoText" id="" value="">Add Task</button>
         
       </form>
 
@@ -36,8 +37,7 @@
 
       <form id="newList" class="cnewList"> <!--Opprettelse av ny liste-->
 
-        Add List: 
-        <input type="text" autocomplete="off" name="list_name" id="" value="" placeholder="List name" />
+        <button id="newList" class="addCard shadow animate blue" onClick="newList()" name="list_name" id="" value="">Add List</button>
         <!--Regulerer verdier om lister og lagring av disse-->
 
       </form>

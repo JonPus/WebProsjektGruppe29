@@ -78,7 +78,7 @@ body {
   font-size: 13px;
 }
 
-/*Button placement*/
+/*Button Styling*/
 
 .listButton {
   position: relative;
@@ -87,6 +87,36 @@ body {
   left: 25px;
   top: 260px;
   margin-right: 260px;
+}
+
+.addCard {
+	position: relative;
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  left: 0px;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 18px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.blue {
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+}
+
+.animate {
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.addCard:active {
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
 }
 
 .header {
@@ -109,28 +139,6 @@ body {
   text-align: right;
   letter-spacing: 1px;
 }
-.fromCard,
-.cnewList {
-  padding: 10px 20px;
-  background: #c6c7c7;
-
-}
-.fromCard input,
-.cnewList input {
-  margin-left: 10px;
-}
-.cnewList {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-} 
-input[type=text] {
-  padding: 5px 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 13px; 
-} 
 .total-card-counter {
   display: inline-block;
   margin: 0;
