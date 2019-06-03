@@ -179,7 +179,8 @@ body {
 /*********************Chat*************************/
 
 /*Chat Containers*/
-.chatContainer {
+
+#chatContainer {
   background-color: transparent;
   position: absolute;
   bottom: 120px;

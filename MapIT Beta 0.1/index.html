@@ -43,14 +43,11 @@
       </form>
 
     </div>
-    <form>
-     <input type="text" name="search" placeholder="Skriv en melding...">
+    <form autocomplete="off" onclick="showContainer()">
+     <input type="text" id="chatInputBox" placeholder="Skriv en melding...">
     </form> 
 
-    <div class="chatContainer">
-
-       
-        <!---<div class="close">&times;</div>-->
+    <div id="chatContainer">
           
             <div class="personContainer">
             <img class="male" src="./Images/manFB.jpg">

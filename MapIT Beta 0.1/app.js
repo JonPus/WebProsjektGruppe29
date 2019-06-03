@@ -34,6 +34,17 @@ function moveBar() {
 
 }
 
+function showContainer(){
+
+  var status = document.getElementById("chatContainer");
+  if (status.style.display === "none") {
+    status.style.display = "block";
+  } else {
+    status.style.display = "none";
+  }
+
+}
+
 
 (function() {
 
