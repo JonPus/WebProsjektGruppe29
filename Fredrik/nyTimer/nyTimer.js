@@ -1,6 +1,14 @@
 
 
-document.getElementById('btn').addEventListener('click', myFunction);
+/*const date = new.date();
+
+let timer = date + intput.value; */
+
+
+
+
+
+document.getElementById('nedtellingButton').addEventListener('click', myFunction);
 
 function myFunction() {
 
