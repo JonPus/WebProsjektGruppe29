@@ -1,6 +1,47 @@
 
-/*Progress Bar funksjonen */
+/*function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}*/
+
+function removeCards(id){
+
+  var card = getElementById("spanBar");
+  return card.parentNode.removeChild(id);
+
+}
+
+/*Progress Bar funksjonen */
 
 function moveFinished() {
   var elem = document.getElementById("spanBar"); 
@@ -44,6 +85,7 @@ function showContainer(){
   }
 
 }
+
 
 
 (function() {
@@ -182,6 +224,24 @@ function showContainer(){
 
   }
 
+  function deleteCards() {
+
+    var text = prompt("Task");
+
+    listID = listID || -1;
+    if(!text) return false;
+    var list = document.getElementById('list_'+listID);
+    var card = createCard(text, listID, index);
+    if(index) {
+      list.insertBefore(card, list.children[index]);
+    } else {
+      list.removeChild(card);
+    }
+
+    if(updateCounters !== false) updateCardCounts();
+
+  }
+
   
   function getList (obj) {
     return _.find(lists, obj);
@@ -251,5 +311,3 @@ function showContainer(){
   });
   
 })();
-
-  

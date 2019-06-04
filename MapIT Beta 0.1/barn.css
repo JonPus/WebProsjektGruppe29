@@ -3,11 +3,11 @@ body {
 }
 
 #pirateship img {
+  float: left;
     width: 200px;
-    bottom: 85px;
-    right: 200;
+    right: 200px;
     position: fixed;
-    z-index: 1;
+    z-index: 35;
     animation-name: shipAnimation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -57,7 +57,7 @@ body {
     transform: rotate(-60deg);
     bottom: -100px;
     right: 500;
-    z-index: 10;
+    z-index: 35;
     animation-name: monsterAnimation;
     animation-duration: 40s;
     animation-timing-function: linear;
@@ -83,9 +83,9 @@ body {
 }
 
 @keyframes shipAnimation {
-  0%   {bottom: 85px;}
-  50%  {bottom: 105px;}
-  100% {bottom: 85px;}
+  0%   {bottom: 70px;}
+  50%  {bottom: 90px;}
+  100% {bottom: 70px;}
 }
 
 @keyframes monsterAnimation {

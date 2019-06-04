@@ -2,50 +2,54 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  
   <title>MapIT</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css"/>
   
 </head>
-  <body>
+  <body onload="checkCookie()">
+
+
+     
 
     <div class="app-wrapper">
 
-      <header class="header">
-
-        <h1 class="logo">MapIT <!--Logo øverst på siden -->
-        </h1>
-
-      </header>
-
+        <a href="./startside.html">
+          <img src="Images/MapITlogo.png" alt="MapItLogo" class="logo">
+        </a>
+  
+      <div class="header"></div>
+  
       <div class="progress-bar blue stripes">
+  
           <span id="spanBar"></span>
+  
       </div>
-      <button class="gradient-button gradient-button-3" onclick="moveFinished()">FINISH</button>
 
-      <form id="addCard" class="fromCard"> <!--Legger til cards i "to do" list-->
-        
-        <button id="addCard" class="addCard shadow animate blue" onClick="addCard()" name="todoText" id="" value="">Add Task</button>
-        
-      </form>
+        <button class="gradient-button gradient-button-3" onclick="removeCards()">FINISH</button>
 
+        <form id="newList" class="cnewList"> 
 
-    <div class="board" id="board">
+          <button id="newList" class="newList shadow animate blue" onClick="newList()" name="list_name" id="" value="">Add List</button>
 
-    </div><!--Tar denne senere-->
+        </form>
 
-      <form id="newList" class="cnewList"> <!--Opprettelse av ny liste-->
+        <form id="addCard" class="fromCard"> 
+          
+          <button id="addCard" class="addCard shadow animate blue" onClick="addCard()" name="todoText" id="" value="">Add Task</button>
+          
+        </form>
 
-        <button id="newList" class="addCard shadow animate blue" onClick="newList()" name="list_name" id="" value="">Add List</button>
-        <!--Regulerer verdier om lister og lagring av disse-->
-
-      </form>
+        <div class="board" id="board"></div>
 
     </div>
-    <form autocomplete="off" onclick="showContainer()">
-     <input type="text" id="chatInputBox" placeholder="Skriv en melding...">
-    </form> 
+
+      <form autocomplete="off" onclick="showContainer()">
+
+        <input type="text" id="chatInputBox" placeholder="Skriv en melding...">
+
+      </form> 
 
     <div id="chatContainer">
           
@@ -76,7 +80,9 @@
             <div class="timeLeft">11:05</div>
             </div>
 
-      </div>
+    </div>
+
+    <div class="bottomLine"></div>
 
     <script src="https://cdn.jsdelivr.net/lodash/4/lodash.min.js"></script>
       <script src="app.js"></script>
