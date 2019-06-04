@@ -1,0 +1,47 @@
+body {
+    margin: 0;  
+    padding: 0; 
+}
+input[type=datetime-local] {
+    background-color: #7bc3c5;
+    background-image:url(./kalender.png);
+    background-size: 20px;
+    background-position: -1px -1px;
+    background-repeat: no-repeat;
+    padding-left: 20px; 
+    block-size: 20px;
+}
+
+#btn{
+    left: 40px;
+    position: relative;
+}
+
+#inputDato{
+    left: 20px;
+    position: relative;
+    padding: 9px;   
+}
+
+.container {
+    background: rgb(218, 39, 39);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+
+#timer {
+    color: #fff;
+    font-size: 4rem;
+}
+
+.label {
+    font-size: 2.5rem;
+    padding-left: 0.25rem;
+}
+
+
