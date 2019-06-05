@@ -13,7 +13,6 @@ body {
 .hidden {
   display: none;
 }
-
 .board {
   overflow: auto;
   padding: 20px;
@@ -25,7 +24,6 @@ body {
   top: 118px;
   bottom: 33px;
   padding-right: 15px;
-  z-index: -5;
 }
 .list {
   display: inline-block;
@@ -80,56 +78,28 @@ body {
   font-size: 13px;
 }
 
-/*Site Elements*/
-
-.bottomLine {
-
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-image: linear-gradient(rgba(255,0,0,0), rgb(60, 87, 240))
-
-}
-
 /*Button Styling*/
 
 .listButton {
-  position: absolute;
+  position: relative;
   color: black;
   border-color: #348AC7;
   left: 25px;
   top: 260px;
   margin-right: 260px;
-  z-index: 2;
 }
 
 .addCard {
-	position: absolute;
+	position: relative;
 	padding: 5px 20px;
   margin: 0px 10px 10px 0px;
-  top: 88px;
-  left: 150px;
-	border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
-	color: #FFF;
-  text-decoration: none;	
-  z-index: 2;
-}
-
-.newList{
-  position: absolute;
-	padding: 5px 20px;
-  margin: 0px 10px 10px 0px;
-  top: 88px;
+  float: left;
   left: 0px;
 	border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
+	font-family: 'Pacifico', cursive;
 	font-size: 18px;
 	color: #FFF;
-  text-decoration: none;	
-  z-index: 2;
+	text-decoration: none;	
 }
 
 .blue {
@@ -150,22 +120,16 @@ body {
 }
 
 .header {
+  padding: 20px;
+  height: 40px;
   position: relative;
-  height: 60px;
-  background-color: #2980B9;
-  opacity: 0.2;
-  top: -42px;
-  
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,105,1) 0%, rgba(0,168,255,1) 100%);; /* På vent */
 } 
 .logo {
-  width: 120px;
-  left: 500px;
+  margin: -11px;
+  left: 558px;
   position: relative;
-  top: 10px;
-  padding: 0px;
-  margin: 0px;
-  z-index: 3;
-  
+  display: inline-block;
 }
 .logo small {
   font-size: 9px;
@@ -190,7 +154,6 @@ body {
 
 .gradient-button {
   font-family: "Arial Black", Gadget, sans-serif;
-  top: -10px;
   float: right;
   font-size: 10px;
   padding: 15px;
@@ -207,21 +170,11 @@ body {
   cursor: pointer;
   display: inline-block;
   border-radius: 25px;
-  z-index: 5;
   
 }
-.gradient-button-3 {
 
-  background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%);
-  z-index: 5;
-
-}
-.gradient-button-3:hover { 
-
-  background-position: right center;
-  z-index: 5; 
-
-}
+.gradient-button-3 {background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%, #7474BF 100%)}
+.gradient-button-3:hover { background-position: right center; }
 
 /*********************Chat*************************/
 
@@ -230,7 +183,7 @@ body {
 #chatContainer {
   background-color: transparent;
   position: absolute;
-  bottom: 20px;
+  bottom: 120px;
   right: 30px;
   width: 420px;
   height: 300px;
@@ -319,7 +272,7 @@ body {
 
 /* Skriv Melding her....*/
 input[type=text] {
-  bottom: 0px;
+  bottom: 90px;
   right: 30px;
   width: 400px;
   height: 30px;
@@ -343,14 +296,12 @@ input[type=text] {
 .progress-bar {
   background-color: #fff;
   position: relative;
-  top: -42px;
   height: 25px;
   padding: 3px;
   width: 100%;
   margin: 0px 0;         
   border-radius: 5px;
-  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
-  z-index: 5;           
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;           
 }
 
 .progress-bar span {
@@ -413,249 +364,3 @@ input[type=text] {
 50% { box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
 100% { box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
 } 
-
-/*Kalender Fredrik*/
-
-.containerCalendar {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  right: 100px;
-  bottom: 0px;
-}
-
-.calendarCard{
-  position: relative;
-	width: 500px;
-	height: 500px;
-	padding: 0px;
-  border: 20px;
-  
-}
-
-.hideCalender{
-	position: absolute;
-	padding: 5px 20px;
-  margin: 0px 10px 10px 0px;
-  top: 88px;
-  left: 300px;
-	border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
-	color: #FFF;
-  text-decoration: none;	
-  z-index: 2;
-}
-
-.table td, .table th {
-  vertical-align: top;
-  padding: .10rem;
-  border-top: 1px solid rgb(222, 226, 230);
-}
-
-.cardHeader {
-  font-size: 20px;
-}
-
-.naviButton-outline-primary:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-.naviButton:focus, .btn:hover {
-  text-decoration: none;
-}
-
-.naviButton {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: 5px 5px;
-  font-size: 15px;
-  line-height: 1.5;
-  border-radius: 25px;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.lead {
-  font-size: 15px;
-  font-weight: 300;
-}
-
-select.form-control:not([size]):not([multiple]) {
-  height: calc(12px + 15px);
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  font-size:12px;
-  line-height: 1.5;
-  color: rgb(73, 80, 87);
-  background-color: rgb(255, 255, 255);
-  background-clip: padding-box;
-  padding: 3px 5px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(206, 212, 218);
-  border-image: initial;
-  border-radius: 25px;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-}
-
-/*Nedteller Fredrik */
-
-.countdownContainer {
-  position: absolute;
-  text-align: center;
-  background: transparent;
-  font-family: sans-serif;
-  font-weight: 100;
-  top: 0px;
-  right: 0px;
-  z-index: 2;
-  width: 600px;
-  height: 100px;
-}
-
-#textCount{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-  border: 10px solid black;
-}
-
-#clockdiv{
-    position: relative;
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
-    text-align: center;
-    font-size: 15px;
-    bottom: 0px;
-    top: 8px;
-    right: 5px;
-}
-
-#clockdiv > div{
-    padding: 5px;
-    border-radius: 3px;
-    background: #00BF96;
-    display: inline-block;
-}
-
-#clockdiv div > span{
-    padding: 1px;
-    border-radius: 3px;
-    background: #00816A;
-    display: inline-block;
-}
-
-.smalltext{
-    padding-top: 5px;
-    font-size: 10px;
-}
-
-#nedtellingButton {
-  position: absolute;
-  top: 30px;
-  right: 10px;
-}
-
-#scrollHours {
-  position: absolute;
-  top: 30px;
-  right: 190px;
-  z-index: 3;
-}
-
-#scrollMinutes {
-  position: absolute;
-  top: 30px;
-  right: 150px;
-  z-index: 3;
-}
-
-#scrollSeconds {
-  position: absolute;
-  top: 30px;
-  right: 110px;
-  z-index: 3;
-}
-
-.countdownTitle {
-  position: absolute;
-  font-size: 20px;
-  top: 3px;
-  right: 10px;
-  color: black;
-}
-
-/*Fredrik shutdownCounter */
-
-.shutdownContainer {
-  position: absolute;
-  background: transparent;
-  width: 300px;
-  height: 50px;
-  top: 20px;
-  right: 360px;
-  z-index: 3;
-}
-
-.inputDato[type=datetime-local] {
-  background-color: #7bc3c5;
-  background-image:url(./kalender.png);
-  background-size: 20px;
-  background-position: -1px -1px;
-  background-repeat: no-repeat;
-  padding-left: 20px; 
-  block-size: 20px;
-}
-
-#startButton{
-  left: 30px;
-  position: relative;
-}
-
-#inputDato{
-  left: 20px;
-  position: relative;
-  padding: 9px;  
-  width: 150px; 
-}
-
-.shutdownTextContainer {
-  background: transparent;
-  width: 600px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 150px;
-  left: 300px;
-}
-
-
-#timer {
-  color: #fff;
-  font-size: 100px;
-  z-index: 20;
-}
-
-.label {
-  font-size: 25px;;
-  padding-left: 10px;
-}
-
-

@@ -241,6 +241,7 @@ function showContainer(){
   
   function init() {
 
+    newList('To do');
     updateCardCounts();
     
     moveCard(2, 1, 3);
