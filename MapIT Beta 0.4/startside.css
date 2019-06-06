@@ -1,10 +1,10 @@
 body{
     background-image: url("./Images/blueFlow.jpg");
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
-    margin: 0;
+    position: 100%;
 }
 
 .side{
@@ -18,32 +18,30 @@ body{
 
 #barneside{
     position: absolute;
-    right: 25%;
-    top: 40%;
-    width: 15%;
-}
-
-#OW{
-    position: absolute;
-}
-
-#containerMAP p{
-    position: absolute;
-    color: wheat;
+    right: 21%;
+    top: 34%;
+    width: 23%;
 }
 
 #voksen{
     position: absolute;
-    right: 50%;
+    right: 60%;
     top: 40%;
     width: 18%;
 }
 
 #tekst{
     position: absolute;
-    top: 180px;
-    left: 40px;
-    color: white;
-    font-family: 'Lucida Sans', bold; 
-    font-size: 30px;
+    top: 12%;
+    left: 34%;
+    color: rgba(0, 58, 134, 0.842);
+    font-family: 'Rockwell', bold; 
+    font-size: 35px;
+}
+
+#logoID {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 10%;
 }

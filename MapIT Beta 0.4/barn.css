@@ -2,16 +2,49 @@ body {
     background-image: url(./Images/sky.png);
 }
 
+#redx img {
+    width: 70px;
+    top: 20px;
+    right: 0px;
+    position: fixed;
+}
+
+#logo img {
+    width: 120px;
+    top: -4px;
+    left: 500px;
+    position: relative;
+}
+
+#audio {
+    top: 140px;
+    left: 5px;
+    position: fixed;
+}
+
 #pirateship img {
-  float: left;
     width: 200px;
+    bottom: 18px;
     right: 200px;
     position: fixed;
     z-index: 35;
     animation-name: shipAnimation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     
+}
+#pirateship2 img {
+  width: 200px;
+  bottom: 18px;
+  right: 725;
+  position: fixed;
+  z-index: 35;
+  animation-name: shipAnimation2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  
 }
 
 #waves img {
@@ -55,7 +88,7 @@ body {
     position: fixed;
     width: 200px;
     transform: rotate(-60deg);
-    bottom: -100px;
+    bottom: -110px;
     right: 500;
     z-index: 35;
     animation-name: monsterAnimation;
@@ -83,14 +116,207 @@ body {
 }
 
 @keyframes shipAnimation {
-  0%   {bottom: 70px;}
-  50%  {bottom: 90px;}
-  100% {bottom: 70px;}
+  0%   {bottom: 25px;}
+  50%  {bottom: 45px;}
+  100% {bottom: 25px;}
+}
+
+@keyframes shipAnimation2 {
+  0%   {bottom: 15px;}
+  50%  {bottom: 35px;}
+  100% {bottom: 15px;}
 }
 
 @keyframes monsterAnimation {
-    0% {bottom: -100px;}
-    25% {bottom: -80px;}
-    50% {bottom: 60px;}
-    100% {bottom: -100px;}
+    0% {bottom: -110px;}
+    25% {bottom: -60px;}
+    50% {bottom: -20px;}
+    100% {bottom: -110px;}
 }
+
+.board {
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 138px;
+  bottom: 33px;
+  padding-right: 15px;
+}
+
+.list {
+  flex: 0 0 250px;
+  vertical-align: top;
+  padding: 8px;
+  border-radius: 8px;
+  margin-right: 58px;
+  margin-bottom: 195px;
+  position: relative;
+  top: 1px;
+  background: url(./Images/map2.png);
+  background-size: cover;
+left: 100px;
+bottom: 550px;
+}
+
+.card {
+width:100px;
+border-radius: 5px;
+margin-bottom: 5px;
+padding: 5px 7px;
+-webkit-transition: all 0.3 ease;
+color: rgb(182, 82, 0);
+position: relative;
+font-size: 18px;
+left: 75px;
+font: Courier, monospace;
+}
+.card:hover {
+  opacity: 0.5;
+}
+.card.dragging {
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  -webkit-transform: rotate(-2deg);
+}
+.card-placeholder {
+  display: block;
+  height: 34px;
+  border: 1px dashed #ddd;
+  margin: 3px 0;
+  border-radius: 5px;
+}
+.listname {
+  margin: 0 0 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgb(99, 69, 6);
+  padding: 5px;
+  text-overflow: ellipsis;
+  user-select: none;
+  left: 100px;
+  top: 15px;
+  position: relative;
+  bottom: 5px;
+}
+.listname > span {
+  float: right;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+/*Button Styling*/
+
+.listButton {
+  position: absolute;
+  color: black;
+  border-color: #348AC7;
+  left: 25px;
+  top: 260px;
+  margin-right: 260px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.addCard {
+  border: none;
+	position: absolute;
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  left: 160px;
+  top: 90px;
+	font-family: 'Papyrus';
+	font-size: 18px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.addCard:hover {
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.newList {
+  border: none;
+	position: absolute;
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  left: 20px;
+  top: 90px;
+	font-family: 'Papyrus';
+	font-size: 18px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.newList:hover {
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.blue {
+	background-color: rgb(235, 186, 97);
+}
+
+.animate {
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.addCard:active {
+  box-shadow: inset 0 2px 5px #2370FE; 
+}
+
+#tekst{
+  position: absolute;
+  top: 2%;
+  left: 60%;
+  color: rgba(255, 255, 255, 0.705);
+  font-family: 'Rockwell', bold; 
+  font-size: 15px;
+}
+
+#chestLocked {
+  position: absolute;
+  top: -20;
+  right: -15px;
+  width: 150px;
+  z-index: 50;
+}
+
+/* Progress bar */
+
+.progress-bar {
+  background-color: #fff;
+  position: fixed;
+  height: 25px;
+  padding: 3px;
+  width: 98.5%;
+  margin: 0px 0;         
+}
+
+.progress-bar span {
+  display: inline-block;
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  transition: width .4s ease-in-out;    
+}
+
+.blue span {
+  background-color: black;   
+}
+
+.stripes span {
+  background-size: 50px;
+  background-image: linear-gradient(90deg, white 25%, #C62828 25%,
+                      #C62828 50%, #C62828 50%, #C62828 75%,
+                      #C62828 75%, #C62828);                     
+}
+
+

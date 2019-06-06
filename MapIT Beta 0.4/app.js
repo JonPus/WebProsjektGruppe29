@@ -1,11 +1,3 @@
-function removeCards(id){
-
-  var card = getElementById("spanBar");
-  return card.parentNode.removeChild(id);
-
-}
-
-
 
 /*Progress Bar funksjonen */
 
@@ -51,8 +43,6 @@ function showContainer(){
   }
 
 }
-
-
 
 (function() {
 
