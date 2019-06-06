@@ -35,6 +35,14 @@ body {
   z-index: 100;
 }
 
+/*.animationContainer {
+  width: 100%;
+  background: red;
+  height: 500px;
+  bottom: 0px;
+  position: absolute;
+} */
+
 #pirateship {
     width: 200px;
     right: 700px;
