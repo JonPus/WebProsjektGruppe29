@@ -14,7 +14,22 @@ function moveFinished() {
       
     }
   }
+
+  setTimeout(function(){ chestAppear();}, 3000);
+
 }
+
+function chestAppear() {
+
+  var chest = document.getElementById("chest");
+  if (chest.style.display === "block") {
+    chest.style.display = "none";
+  } else {
+    chest.style.display = "block";
+  }
+
+}
+
 
 function moveBar() {
   var elem = document.getElementById("spanBar"); 
@@ -166,6 +181,8 @@ function showContainer(){
     heading.className = "listname";
     heading.innerHTML = name;
     heading.appendChild(listCounter)
+
+    listCounter.className ="listCounter";
 
     listCounter.innerHTML = 0;
     

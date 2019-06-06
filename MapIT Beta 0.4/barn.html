@@ -13,9 +13,9 @@
     <div class="progress-bar blue stripes"> <span id="spanBar"></span> </div>
 
     <div class="finishBar">
-        <button class="finishBar" onclick="moveFinished()">
+        <button class="finishBar" type="submit" onclick="moveFinished()" onclick="setTimeout(chestAppear(), 2000)">
 
-            <img class="redX" src="./Images/redX.png" alt="redX"></img>
+            <img class="redXImage" src="./Images/redX.png" alt="redX"></img>
 
         </button>
     </div>
@@ -35,19 +35,22 @@
           <button id="addCard" class="addCard shadow animate blue" onClick="addCard()" name="todoText" id="" value="">Add Clues</button>
           
         </form>
+        
 
-        <div id="audio"> <audio controls loop> <source src="./Audio/oceansound.mp3" type="audio/mp3"> </audio> </div>
+    <img id="seagull" src="Images/seagull.gif" alt="seagull">
+
+    <img id="chest" src="./Images/chest.png" alt="chest">
+
+    <img id="pirateship2" src="./Images/ship.gif" alt="pirateship2">
+    <img id="pirateship" src="./Images/ship.gif" alt="pirateship">
     
-  <div class="containerPirate">
-    <div id="redx"> <img src="./Images/redX.png" alt="redx"> </div>
-    <div id="pirateship2"> <img src="./Images/ship.gif" alt="pirateship2"> </div>
-    <div id="pirateship"> <img src="./Images/ship.gif" alt="pirateship"> </div>
+    <img id="waves" src="./Images/waves.png" alt="waves">  
+    <img id="waves2" src="./Images/waves2.png" alt="waves">
+    <img id="waves3" src="./Images/waves3.png" alt="waves"> 
     
-    <div id="waves"> <img src="./Images/waves.png" alt="waves"> </div>
-    <div id="waves2"> <img src="./Images/waves2.png" alt="waves"> </div>
-    <div id="waves3"> <img src="./Images/waves3.png" alt="waves"> </div>
-    
-    <div id="monster"> <img src="./Images/monster4.png" alt="monster"> </div>
+    <img id="monster" src="./Images/monster4.png" alt="monster">
+
+    <div id="audio"> <audio controls loop> <source src="./Audio/oceansound.mp3" type="audio/mp3"> </audio> </div>
 
   
     

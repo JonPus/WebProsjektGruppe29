@@ -1,12 +1,7 @@
 body {
-    background-image: url(./Images/sky.png);
-}
-
-#redx img {
-    width: 70px;
-    top: 20px;
-    right: 0px;
-    position: fixed;
+    background: url(./Images/sky.png);
+    background-size: cover;
+    overflow: hidden;
 }
 
 #logo img {
@@ -22,11 +17,28 @@ body {
     position: fixed;
 }
 
-#pirateship img {
+#seagull {
+  position: absolute;
+  top: 90px;
+  width: 180px;
+  animation-name: seagullAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+#chest {
+  position: absolute;
+  left: 900px;
+  top: 400px;
+  width: 600px;
+  display: none;
+  z-index: 100;
+}
+
+#pirateship {
     width: 200px;
-    bottom: 18px;
-    right: 200px;
-    position: fixed;
+    right: 700px;
+    position: absolute;
     z-index: 35;
     animation-name: shipAnimation;
     animation-duration: 4s;
@@ -35,11 +47,10 @@ body {
     transform: scaleX(-1);
     
 }
-#pirateship2 img {
+#pirateship2 {
   width: 200px;
-  bottom: 18px;
-  right: 725;
-  position: fixed;
+  left: 700px;
+  position: absolute;
   z-index: 35;
   animation-name: shipAnimation2;
   animation-duration: 4s;
@@ -47,8 +58,8 @@ body {
   
 }
 
-#waves img {
-    position: fixed;
+#waves {
+    position: absolute;
     bottom: -120px;
     width: 100%;
     z-index: 50;
@@ -59,8 +70,8 @@ body {
     
 }
 
-#waves2 img {
-    position: fixed;
+#waves2 {
+    position: absolute;
     bottom: -90px;
     width: 100%;
     z-index: 40;
@@ -72,9 +83,9 @@ body {
     
 }
 
-#waves3 img {
-    position: fixed;
-    bottom: -75px;
+#waves3{
+    position: absolute;
+    bottom:  -75px;
     width: 100%;
     z-index: 30;
     left: 0;
@@ -84,12 +95,12 @@ body {
     
 }
 
-#monster img {
-    position: fixed;
+#monster {
+    position: absolute;
     width: 200px;
     transform: rotate(-60deg);
-    bottom: -110px;
-    right: 500;
+    right: 900;
+    overflow: hidden;
     z-index: 35;
     animation-name: monsterAnimation;
     animation-duration: 40s;
@@ -116,25 +127,32 @@ body {
 }
 
 @keyframes shipAnimation {
-  0%   {bottom: 25px;}
-  50%  {bottom: 45px;}
-  100% {bottom: 25px;}
+  0%   {bottom: 160px;}
+  50%  {bottom: 175px;}
+  100% {bottom: 160px;}
 }
 
 @keyframes shipAnimation2 {
-  0%   {bottom: 15px;}
-  50%  {bottom: 35px;}
-  100% {bottom: 15px;}
+  0%   {bottom: 170px;}
+  50%  {bottom: 190px;}
+  100% {bottom: 170px;}
 }
 
 @keyframes monsterAnimation {
     0% {bottom: -110px;}
-    25% {bottom: -60px;}
-    50% {bottom: -20px;}
+    25% {bottom: 200px;}
+    50% {bottom: -80px;}
     100% {bottom: -110px;}
 }
 
+@keyframes seagullAnimation {
+  0%   {left: 900px;}
+  50%  {left: 920px;}
+  100% {left: 900px;}
+}
+
 .board {
+  overflow: auto;
   padding: 20px;
   display: flex;
   flex: 1;
@@ -144,21 +162,22 @@ body {
   top: 138px;
   bottom: 33px;
   padding-right: 15px;
+  overflow-x: hidden;
 }
 
 .list {
+  display: inline-block;
+  width: 250px;
   flex: 0 0 250px;
   vertical-align: top;
+  overflow: auto;
   padding: 8px;
   border-radius: 8px;
-  margin-right: 58px;
-  margin-bottom: 195px;
-  position: relative;
-  top: 1px;
   background: url(./Images/map2.png);
   background-size: cover;
-left: 100px;
-bottom: 550px;
+  margin-right: 35px;
+  margin-bottom: 180px;
+  overflow-x:hidden;
 }
 
 .card {
@@ -166,44 +185,45 @@ width:100px;
 border-radius: 5px;
 margin-bottom: 5px;
 padding: 5px 7px;
--webkit-transition: all 0.3 ease;
-color: rgb(182, 82, 0);
+transition: all 0.3 ease;
+color:black;
 position: relative;
-font-size: 18px;
-left: 75px;
-font: Courier, monospace;
+font-family: 'Papyrus';
+font-size: 15px;
+font-weight: 200px;
+left: 50px;
+top: 40px;
 }
 .card:hover {
   opacity: 0.5;
 }
 .card.dragging {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
-.card-placeholder {
-  display: block;
-  height: 34px;
-  border: 1px dashed #ddd;
-  margin: 3px 0;
-  border-radius: 5px;
-}
+
 .listname {
   margin: 0 0 10px;
+  position: relative;
   font-size: 14px;
+  font-family: 'Papyrus';
   text-transform: uppercase;
-  color: rgb(99, 69, 6);
+  color: black;
   padding: 5px;
   text-overflow: ellipsis;
   user-select: none;
-  left: 100px;
-  top: 15px;
-  position: relative;
-  bottom: 5px;
 }
 .listname > span {
-  float: right;
+  left: 5px;
   font-weight: normal;
   font-size: 13px;
+}
+
+h3.listname {
+  position: relative;
+  top: 40px;
+  left: 20px;
+  font-size: 20px;
 }
 
 /*Button Styling*/
@@ -292,10 +312,10 @@ font: Courier, monospace;
 
 .progress-bar {
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   height: 25px;
   padding: 3px;
-  width: 98.5%;
+  width: 100%;
   margin: 0px 0;         
 }
 
@@ -317,6 +337,20 @@ font: Courier, monospace;
   background-image: linear-gradient(90deg, white 25%, #C62828 25%,
                       #C62828 50%, #C62828 50%, #C62828 75%,
                       #C62828 75%, #C62828);                     
+}
+
+.finishBar {
+  position: absolute;
+  width: 50px;
+  background: transparent;
+  border: none;
+  right: 0px;
+  top: 15px;
+
+}
+
+.redXImage {
+  width: 50px;
 }
 
 
