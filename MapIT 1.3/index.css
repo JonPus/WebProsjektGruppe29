@@ -1,0 +1,62 @@
+
+
+body {
+    
+    background: #fff url(./Images/blueFlow.jpg) no-repeat center center fixed;
+    background-size: cover; 
+    margin: 0; 
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.side{
+    transform: scale(1);
+    transition: all 500ms ease 0s;
+}
+
+.side:hover {
+    transform: scale(1.2);
+}
+
+#barneside{
+    position: absolute;
+    right: 21%;
+    top: 34%;
+    width: 23%;
+}
+
+#voksen{
+    position: absolute;
+    right: 60%;
+    top: 40%;
+    width: 18%;
+}
+
+.tekst{
+    position: absolute;
+    color: rgba(0, 58, 134, 0.842);
+    font-family: 'Rockwell', bold; 
+    font-size: 35px;
+}
+
+#text1 {
+    left: 700px;
+    bottom: 700px;
+    position: absolute;
+}
+
+#text2 {
+    left: 1010px;
+    bottom: 700px;
+}
+
+#logoID {
+
+    position: absolute;
+    bottom: 724px;
+    width: 160px;
+    left: 850px;
+
+}
