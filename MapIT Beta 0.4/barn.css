@@ -15,7 +15,7 @@ body {
 
 #logo img {
     width: 120px;
-    top: -4px;
+    top: 0px;
     left: 500px;
     position: relative;
 }
@@ -37,25 +37,25 @@ body {
 
 #chest {
   position: absolute;
-  left: 900px;
-  top: 400px;
-  width: 600px;
+  left: 500px;
+  top: 100px;
+  width: 300px;
   display: none;
   z-index: 100;
 }
 
-/*.animationContainer {
+.animationContainer {
   width: 100%;
-  background: red;
-  height: 500px;
+  background: transparent;
+  height: 200px;
   bottom: 0px;
   position: absolute;
-} */
+} 
 
 #pirateship {
     width: 200px;
-    right: 300px;
-    position: absolute;
+    left: 500px;
+    position: relative;
     z-index: 35;
     animation-name: shipAnimation;
     animation-duration: 4s;
@@ -66,8 +66,8 @@ body {
 }
 #pirateship2 {
   width: 200px;
-  left: 400px;
-  position: absolute;
+  left: 200px;
+  position: relative;
   z-index: 35;
   animation-name: shipAnimation2;
   animation-duration: 4s;
@@ -113,10 +113,11 @@ body {
 }
 
 #monster {
+
     position: absolute;
     width: 200px;
     transform: rotate(-60deg);
-    right: 550px;
+    right: 680px;
     overflow: hidden;
     z-index: 35;
     animation-name: monsterAnimation;
@@ -144,20 +145,20 @@ body {
 }
 
 @keyframes shipAnimation {
-  0%   {bottom: 20px;}
-  50%  {bottom: 30px;}
-  100% {bottom: 20px;}
+  0%   {bottom: 15px;}
+  50%  {bottom: 25px;}
+  100% {bottom: 15px;}
 }
 
 @keyframes shipAnimation2 {
-  0%   {bottom: 20px;}
-  50%  {bottom: 30px;}
-  100% {bottom: 20px;}
+  0%   {bottom: 15px;}
+  50%  {bottom: 20px;}
+  100% {bottom: 15px;}
 }
 
 @keyframes monsterAnimation {
     0% {bottom: -110px;}
-    25% {bottom: 50px;}
+    25% {bottom: 30px;}
     50% {bottom: -80px;}
     100% {bottom: -110px;}
 }
