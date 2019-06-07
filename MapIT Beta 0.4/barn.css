@@ -1,7 +1,6 @@
 /*html, body {
     background: url(./Images/sky.png);
     background-size: cover;
-    overflow: hidden;
 }*/
 body {
   font: 75% georgia, sans-serif;
@@ -55,7 +54,7 @@ body {
 
 #pirateship {
     width: 200px;
-    right: 700px;
+    right: 300px;
     position: absolute;
     z-index: 35;
     animation-name: shipAnimation;
@@ -67,7 +66,7 @@ body {
 }
 #pirateship2 {
   width: 200px;
-  left: 700px;
+  left: 400px;
   position: absolute;
   z-index: 35;
   animation-name: shipAnimation2;
@@ -117,7 +116,7 @@ body {
     position: absolute;
     width: 200px;
     transform: rotate(-60deg);
-    right: 900;
+    right: 550px;
     overflow: hidden;
     z-index: 35;
     animation-name: monsterAnimation;
@@ -145,20 +144,20 @@ body {
 }
 
 @keyframes shipAnimation {
-  0%   {bottom: 160px;}
-  50%  {bottom: 175px;}
-  100% {bottom: 160px;}
+  0%   {bottom: 20px;}
+  50%  {bottom: 30px;}
+  100% {bottom: 20px;}
 }
 
 @keyframes shipAnimation2 {
-  0%   {bottom: 170px;}
-  50%  {bottom: 190px;}
-  100% {bottom: 170px;}
+  0%   {bottom: 20px;}
+  50%  {bottom: 30px;}
+  100% {bottom: 20px;}
 }
 
 @keyframes monsterAnimation {
     0% {bottom: -110px;}
-    25% {bottom: 200px;}
+    25% {bottom: 50px;}
     50% {bottom: -80px;}
     100% {bottom: -110px;}
 }
