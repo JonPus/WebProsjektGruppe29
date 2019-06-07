@@ -53,13 +53,6 @@ body {
 }
 
 #logoID {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 10%;
-}
-
-#logoID2 {
 
     position: absolute;
     bottom: 714px;
