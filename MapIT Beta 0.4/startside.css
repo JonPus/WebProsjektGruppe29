@@ -1,10 +1,14 @@
-body{
-    background-image: url("./Images/blueFlow.jpg");
-    background-position: center;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    position: 100%;
+
+
+body {
+    
+    background: #fff url(./Images/blueFlow.jpg) no-repeat center center fixed;
+    background-size: cover; 
+    margin: 0; 
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
 }
 
 .side{
@@ -30,13 +34,22 @@ body{
     width: 18%;
 }
 
-#tekst{
+.tekst{
     position: absolute;
-    top: 12%;
-    left: 34%;
     color: rgba(0, 58, 134, 0.842);
     font-family: 'Rockwell', bold; 
     font-size: 35px;
+}
+
+#text1 {
+    left: 700px;
+    bottom: 700px;
+    position: absolute;
+}
+
+#text2 {
+    left: 1010px;
+    bottom: 700px;
 }
 
 #logoID {
@@ -44,4 +57,13 @@ body{
     top: 10px;
     left: 20px;
     width: 10%;
+}
+
+#logoID2 {
+
+    position: absolute;
+    bottom: 714px;
+    width: 180px;
+    left: 840px;
+
 }

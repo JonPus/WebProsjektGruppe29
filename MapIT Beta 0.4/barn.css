@@ -16,14 +16,16 @@ body {
 #logo img {
     width: 120px;
     top: 0px;
-    left: 500px;
+    left: 920px;
     position: relative;
 }
 
-#audio {
-    top: 140px;
+audio {
+    top: 0px;
     left: 5px;
-    position: fixed;
+    width: 300px;
+    height: 40px;
+    position: absolute;
 }
 
 #seagull {
@@ -37,25 +39,38 @@ body {
 
 #chest {
   position: absolute;
-  left: 500px;
-  top: 100px;
-  width: 300px;
+  left: 700px;
+  top: 400px;
+  width: 400px;
   display: none;
   z-index: 100;
 }
 
-.animationContainer {
+.mainContainer {
   width: 100%;
-  background: transparent;
-  height: 200px;
-  bottom: 0px;
+  height: 100%;
   position: absolute;
 } 
 
+#monster {
+
+  position: absolute;
+  width: 200px;
+  transform: rotate(-60deg);
+  left: 900px;
+  overflow: hidden;
+  z-index: 35;
+  animation-name: monsterAnimation;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
 #pirateship {
     width: 200px;
-    left: 500px;
-    position: relative;
+    left: 1200px;
+    position: absolute;
     z-index: 35;
     animation-name: shipAnimation;
     animation-duration: 4s;
@@ -65,9 +80,10 @@ body {
     
 }
 #pirateship2 {
+
   width: 200px;
-  left: 200px;
-  position: relative;
+  left: 700px;
+  position: absolute;
   z-index: 35;
   animation-name: shipAnimation2;
   animation-duration: 4s;
@@ -112,19 +128,6 @@ body {
     
 }
 
-#monster {
-
-    position: absolute;
-    width: 200px;
-    transform: rotate(-60deg);
-    right: 680px;
-    overflow: hidden;
-    z-index: 35;
-    animation-name: monsterAnimation;
-    animation-duration: 40s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
 
 @keyframes wavesAnimation {
   0%   {bottom: -120px;}
@@ -145,20 +148,20 @@ body {
 }
 
 @keyframes shipAnimation {
-  0%   {bottom: 15px;}
-  50%  {bottom: 25px;}
-  100% {bottom: 15px;}
+  0%   {bottom: 75px;}
+  50%  {bottom: 100px;}
+  100% {bottom: 75px;}
 }
 
 @keyframes shipAnimation2 {
-  0%   {bottom: 15px;}
-  50%  {bottom: 20px;}
-  100% {bottom: 15px;}
+  0%   {bottom: 75px;}
+  50%  {bottom: 100px;}
+  100% {bottom: 75px;}
 }
 
 @keyframes monsterAnimation {
     0% {bottom: -110px;}
-    25% {bottom: 30px;}
+    25% {bottom: 80px;}
     50% {bottom: -80px;}
     100% {bottom: -110px;}
 }
@@ -192,8 +195,9 @@ body {
   padding: 8px;
   border-radius: 8px;
   background: url(./Images/map2.png);
-  background-size: cover;
+  background-size: contain;
   margin-right: 35px;
+  background-repeat: no-repeat;
   margin-bottom: 180px;
   overflow-x:hidden;
 }
