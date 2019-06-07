@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>MapIT</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="barn.css">
+    <link rel="stylesheet" href="barn.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+  <!--Hoved container for bakgrunn-->
+  <div class="mainContainer">
+    
+    <div id="logo"> <a href="./index.html">
+      <img src="Images/MapITlogo.png" alt="MapItLogo" class="logo">
+    </a> </div>
+    
+    <div class="progress-bar blue stripes"> <span id="spanBar"></span> </div>
+
+    <div class="finishBar">
+        <button class="finishBar" type="submit" onclick="moveFinished()" onclick="setTimeout(chestAppear(), 2000)">
+
+            <img class="redXImage" src="./Images/redX.png" alt="redX"></img>
+
+        </button>
+    </div>
+
+    <!--Knapper for lister og oppgaver-->
+    <div class="board" id="board">
+
+      </div>
+    
+      <form id="newList" class="cnewList"> 
+
+          <button id="newList" class="newList shadow animate blue" onClick="newList()" name="list_name" id="" value="">Add Maps</button>
+
+        </form>
+
+        <form id="addCard" class="fromCard"> 
+          
+          <button id="addCard" class="addCard shadow animate blue" onClick="addCard()" name="todoText" id="" value="">Add Clues</button>
+          
+        </form>
+        <!--Bilder-->
+        <img id="chest" src="./Images/chest.png" alt="chest">
+        <img id="seagull" src="Images/seagull.gif" alt="seagull">
+        <img id="pirateship2" src="./Images/ship.gif" alt="pirateship2">
+        <img id="pirateship" src="./Images/ship.gif" alt="pirateship">
+
+        <!--Lydfil-->
+        <audio controls loop> <source src="./Audio/oceansound.mp3" type="audio/mp3"> </audio>
+  </div>
+
+
+
+  <img id="waves" src="./Images/waves.png" alt="waves">  
+    <img id="waves2" src="./Images/waves2.png" alt="waves">
+    <img id="waves3" src="./Images/waves3.png" alt="waves"> 
+    
+    <img id="monster" src="./Images/monster4.png" alt="monster">
+
+  </div>
+    
+    <script src="https://cdn.jsdelivr.net/lodash/4/lodash.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
