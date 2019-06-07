@@ -1,8 +1,18 @@
-body {
+/*html, body {
     background: url(./Images/sky.png);
     background-size: cover;
     overflow: hidden;
-}
+}*/
+body {
+  font: 75% georgia, sans-serif;
+	color: #555753; 
+  background: #fff url(./Images/sky.png) no-repeat center center fixed;
+  background-size: cover; 
+	margin: 0; 
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+	}
 
 #logo img {
     width: 120px;
