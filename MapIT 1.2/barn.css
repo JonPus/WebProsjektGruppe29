@@ -1,0 +1,378 @@
+/*html, body {
+    background: url(./Images/sky.png);
+    background-size: cover;
+}*/
+body {
+  font: 75% georgia, sans-serif;
+	color: #555753; 
+  background: #fff url(./Images/sky.png) no-repeat center center fixed;
+  background-size: cover; 
+	margin: 0; 
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+	}
+
+#logo img {
+    width: 120px;
+    top: 0px;
+    left: 920px;
+    position: relative;
+}
+
+audio {
+    top: 0px;
+    left: 5px;
+    width: 300px;
+    height: 40px;
+    position: absolute;
+}
+
+#seagull {
+  position: absolute;
+  top: 90px;
+  width: 180px;
+  animation-name: seagullAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+#chest {
+  position: absolute;
+  left: 700px;
+  top: 400px;
+  width: 400px;
+  display: none;
+  z-index: 100;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+} 
+
+#monster {
+
+  position: absolute;
+  width: 200px;
+  transform: rotate(-60deg);
+  left: 900px;
+  overflow: hidden;
+  z-index: 35;
+  animation-name: monsterAnimation;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+#pirateship {
+    width: 200px;
+    left: 1200px;
+    position: absolute;
+    z-index: 35;
+    animation-name: shipAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    
+}
+#pirateship2 {
+
+  width: 200px;
+  left: 700px;
+  position: absolute;
+  z-index: 35;
+  animation-name: shipAnimation2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  
+}
+
+#waves {
+    position: absolute;
+    bottom: -120px;
+    width: 100%;
+    z-index: 50;
+    left: 0;
+    animation-name: wavesAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+}
+
+#waves2 {
+    position: absolute;
+    bottom: -90px;
+    width: 100%;
+    z-index: 40;
+    transform: scaleX(-1);
+    left: 0;
+    animation-name: waves2Animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+}
+
+#waves3{
+    position: absolute;
+    bottom:  -75px;
+    width: 100%;
+    z-index: 30;
+    left: 0;
+    animation-name: waves3Animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+}
+
+
+@keyframes wavesAnimation {
+  0%   {bottom: -120px;}
+  50%  {bottom: -140px;}
+  100% {bottom: -120px;}
+}
+
+@keyframes waves2Animation {
+  0%   {bottom: -90px;}
+  50%  {bottom: -70px;}
+  100% {bottom: -90px;}
+}
+
+@keyframes waves3Animation {
+  0%   {bottom: -75px;}
+  50%  {bottom: -95px;}
+  100% {bottom: -75px;}
+}
+
+@keyframes shipAnimation {
+  0%   {bottom: 75px;}
+  50%  {bottom: 100px;}
+  100% {bottom: 75px;}
+}
+
+@keyframes shipAnimation2 {
+  0%   {bottom: 75px;}
+  50%  {bottom: 100px;}
+  100% {bottom: 75px;}
+}
+
+@keyframes monsterAnimation {
+    0% {bottom: -110px;}
+    25% {bottom: 80px;}
+    50% {bottom: -80px;}
+    100% {bottom: -110px;}
+}
+
+@keyframes seagullAnimation {
+  0%   {left: 900px;}
+  50%  {left: 920px;}
+  100% {left: 900px;}
+}
+
+.board {
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  flex: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 138px;
+  bottom: 33px;
+  padding-right: 15px;
+  overflow-x: hidden;
+}
+
+.list {
+  display: inline-block;
+  width: 250px;
+  flex: 0 0 250px;
+  vertical-align: top;
+  overflow: auto;
+  padding: 8px;
+  border-radius: 8px;
+  background: url(./Images/map2.png);
+  background-size: contain;
+  margin-right: 35px;
+  background-repeat: no-repeat;
+  margin-bottom: 180px;
+  overflow-x:hidden;
+}
+
+.card {
+width:100px;
+border-radius: 5px;
+margin-bottom: 5px;
+padding: 5px 7px;
+transition: all 0.3 ease;
+color:black;
+position: relative;
+font-family: 'Papyrus';
+font-size: 15px;
+font-weight: 200px;
+left: 50px;
+top: 40px;
+}
+.card:hover {
+  opacity: 0.5;
+}
+.card.dragging {
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transform: rotate(-2deg);
+}
+
+.listname {
+  margin: 0 0 10px;
+  position: relative;
+  font-size: 14px;
+  font-family: 'Papyrus';
+  text-transform: uppercase;
+  color: black;
+  padding: 5px;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+.listname > span {
+  left: 5px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+h3.listname {
+  position: relative;
+  top: 40px;
+  left: 20px;
+  font-size: 20px;
+}
+
+/*Button Styling*/
+
+.listButton {
+  position: absolute;
+  color: black;
+  border-color: #348AC7;
+  left: 25px;
+  top: 260px;
+  margin-right: 260px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.addCard {
+  border: none;
+	position: absolute;
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  left: 160px;
+  top: 90px;
+	font-family: 'Papyrus';
+	font-size: 18px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.addCard:hover {
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.newList {
+  border: none;
+	position: absolute;
+	padding: 5px 20px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  left: 20px;
+  top: 90px;
+	font-family: 'Papyrus';
+	font-size: 18px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.newList:hover {
+  border: 1px #2F5BB7 solid;
+  box-shadow: 0 1px 1px #EAEAEA, inset 0 1px 0 #5A94F1;
+  background: #3F83F1;
+}
+
+.blue {
+	background-color: rgb(235, 186, 97);
+}
+
+.animate {
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.addCard:active {
+  box-shadow: inset 0 2px 5px #2370FE; 
+}
+
+#tekst{
+  position: absolute;
+  top: 2%;
+  left: 60%;
+  color: rgba(255, 255, 255, 0.705);
+  font-family: 'Rockwell', bold; 
+  font-size: 15px;
+}
+
+#chestLocked {
+  position: absolute;
+  top: -20;
+  right: -15px;
+  width: 150px;
+  z-index: 50;
+}
+
+/* Progress bar */
+
+.progress-bar {
+  background-color: #fff;
+  position: absolute;
+  height: 25px;
+  padding: 3px;
+  width: 100%;
+  margin: 0px 0;         
+}
+
+.progress-bar span {
+  display: inline-block;
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  transition: width .4s ease-in-out;    
+}
+
+.blue span {
+  background-color: black;   
+}
+
+.stripes span {
+  background-size: 50px;
+  background-image: linear-gradient(90deg, white 25%, #C62828 25%,
+                      #C62828 50%, #C62828 50%, #C62828 75%,
+                      #C62828 75%, #C62828);                     
+}
+
+.finishBar {
+  position: absolute;
+  width: 50px;
+  background: transparent;
+  border: none;
+  right: 0px;
+  top: 15px;
+
+}
+
+.redXImage {
+  width: 50px;
+}
+
+
